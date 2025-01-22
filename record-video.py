@@ -14,7 +14,7 @@ def videoRecorder():
     # create a VideoWrite object, recoring to ./video.avi
     # 创建一个VideoWrite对象，存储画面至./video.avi
     height, width, _ = frame_read.frame.shape
-    video = cv2.VideoWriter('video.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (width, height))
+    video = cv2.VideoWriter('video.avi', cv2.VideoWriter_fourcc(*'XVID'), 60, (width, height))
 
     while keepRecording:
         video.write(frame_read.frame)
